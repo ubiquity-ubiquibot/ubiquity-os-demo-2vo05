@@ -1,0 +1,35 @@
+plugins:
+  - uses:
+      - plugin: "https://os-command-start-stop.ubq.fi"
+        skipBotEvents: false
+  - uses:
+      - plugin: "https://os-command-demo.ubq.fi"
+  - uses:
+      - plugin: "https://os-command-wallet.ubq.fi"
+  - uses:
+      - plugin: "ubiquity-os-marketplace/command-ask@v1.2.0"
+        with:
+          model: "deepseek/deepseek-r1-0528:free"
+          openAiBaseUrl: "https://openrouter.ai/api/v1"
+  - uses:
+      - plugin: "https://os-command-query.ubq.fi"
+  - uses:
+      - plugin: "ubiquity-os-marketplace/text-conversation-rewards@v1.7.2"
+        skipBotEvents: false
+        with:
+          incentives:
+            collaboratorOnlyPaymentInvocation: false
+            contentEvaluator: {}
+            userExtractor: {}
+            dataPurge: {}
+            formattingEvaluator: {}
+            payment: {}
+            githubComment: {}
+          evmPrivateEncrypted: "87hvoyzlFQ96UhiZEDf7TDJCaxmzvKh9D84Nd4-2QwCieXG6ilyJOHJkD_n4GWY5NTY70d-6lA4RkrTOLgqrXgSGsUTsPGFsw0H15dZ3miBFdJaTijF4bMm5Ske3pWsXJMs1ZmiNX8BVoS1PVsOTru9ajwsOL3Akcb7GmooD_16-Nuqd3w"
+          evmNetworkId: 100
+  - uses:
+      - plugin: "ubiquity-os-marketplace/daemon-disqualifier@v1.0.0"
+  - uses:
+      - plugin: "ubiquity-os-marketplace/text-vector-embeddings@v1.0.0"
+        with:
+          demoFlag: true
